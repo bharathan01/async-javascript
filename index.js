@@ -91,16 +91,24 @@ getFlower = new Promise((res, rej) => {
 
 //all
 
- Promise.all([getAminal,getFlower]).then((data) => console.log(data)).catch(console.log("error")) // obtaining the all resloved  promises
+ Promise.all([getAminal,getFlower])
+	 .then((data) => console.log(data))
+	 .catch(console.log("error")) // obtaining the all resloved  promises
 
 //allsettiled
- Promise.allSettled([getAminal,getFlower]).then((data) => console.log(data)).catch(console.log("error")) // obtaining the resloved promises only ..
+ Promise.allSettled([getAminal,getFlower])
+	 .then((data) => console.log(data))
+	 .catch(console.log("error")) // obtaining the resloved promises only ..
 
 //any
- Promise.any([getAminal,getFlower]).then((data) => console.log(data)).catch(console.log("error")) // returning a single promises , after the sucess.
+ Promise.any([getAminal,getFlower])
+	 .then((data) => console.log(data))
+	 .catch(console.log("error")) // returning a single promises , after the sucess.
 
 //race
- Promise.race([getAminal,getFlower]).then((data) => console.log(data)).catch(console.log("error"))  // return the first resolved or rejected promises 
+ Promise.race([getAminal,getFlower])
+	 .then((data) => console.log(data))
+	 .catch(console.log("error"))  // return the first resolved or rejected promises 
 
 /*=============================================*/
 
